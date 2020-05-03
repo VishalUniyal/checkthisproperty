@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter } from "react-router-dom";
+//import { BrowserRouter } from "react-router-dom";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import * as parkDate from "./data/skateboard-parks.json";
-//import Navbar from "./components/layout/Navbar";
+import NavbarTop from "./components/layout/NavbarTop";
+//import * as ReactBootStrap from "react-bootstrap";
 
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
 
   return (
     <div>
+      <NavbarTop/>
       <ReactMapGL
         {...viewport}
         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
